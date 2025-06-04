@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>uselessthingsontheweb.github.io</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', 'Arial', sans-serif;
+      /* Changed background to a blue-violet gradient */
+      background: linear-gradient(135deg, #63a4ff 0%, #8360c3 100%);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    .container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    h1 {
+      font-size: 2.4rem;
+      color: #fff;
+      margin-bottom: 0.5em;
+      letter-spacing: 1.5px;
+      text-shadow: 1px 1px 2px #2a387e99, 0 2px 16px #4b0082;
+      /* Changed title per request */
+    }
+    p {
+      font-size: 1.15rem;
+      color: #e3e3e3;
+      margin-bottom: 2em;
+      text-shadow: 0 1px 8px #31246355;
+    }
+    button {
+      background: linear-gradient(90deg, #ffb199 0%, #ff0844 100%);
+      color: #fff;
+      border: none;
+      border-radius: 32px;
+      padding: 1em 2.2em;
+      font-size: 1.3rem;
+      font-weight: bold;
+      box-shadow: 0 2px 16px #ffb4d0cc;
+      cursor: pointer;
+      transition: transform 0.08s, box-shadow 0.2s;
+    }
+    button:hover {
+      transform: scale(1.07) rotate(-2deg);
+      box-shadow: 0 6px 32px #ffaec9dd;
+    }
+    .inspired-corner {
+      position: fixed;
+      bottom: 16px;
+      left: 18px;
+      background: rgba(255,255,255,0.10);
+      border-radius: 8px;
+      padding: 5px 14px;
+      font-size: 0.95rem;
+      color: #f6caff;
+      letter-spacing: 0.5px;
+      z-index: 100;
+      box-shadow: 0 1px 6px #8360c333;
+      font-family: inherit;
+      pointer-events: auto;
+    }
+    .inspired-corner a {
+      color: #ffe7fa;
+      text-decoration: underline;
+      font-weight: 500;
+    }
+    @media (max-width: 600px) {
+      h1 { font-size: 1.3rem; }
+      p { font-size: 1rem; }
+      button { font-size: 1rem; padding: 0.9em 1.7em; }
+      .inspired-corner { font-size: 0.85rem; left: 8px; bottom: 8px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>uselessthingsontheweb.github.io</h1>
+    <p>
+      Are you ready to waste some time? <br>
+      Click the button below to visit a truly <b>useless</b> website!
+    </p>
+    <button onclick="goToUselessSite()">Take me to a useless website!</button>
+  </div>
+  <div class="inspired-corner">
+    Inspired by <a href="https://theuselessweb.com" target="_blank" rel="noopener">theuselessweb.com</a>
+  </div>
+  <script>
+    // List of useless websites. You can add more!
+    const uselessSites = [
+      "https://www.pointerpointer.com/",
+      "https://www.staggeringbeauty.com/",
+      "https://www.ismycomputeron.com/",
+      "https://www.sanger.dk/",
+      "https://www.rrrgggbbb.com/",
+      "https://www.patience-is-a-virtue.org/",
+      "https://www.fallingfalling.com/",
+      "https://www.sadforjapan.com/",
+      "https://www.trypap.com/",
+      "https://www.electricboogiewoogie.com/",
+      "https://www.koalastothemax.com/",
+      "https://www.thatsthefinger.com/",
+      "https://www.ouaismaisbon.ch/",
+      "https://www.movenowthinklater.com/",
+      "https://www.bouncingdvdlogo.com/",
+      "https://www.hackertyper.com/",
+      "https://www.annoying.technology/",
+      "https://www.donothingfor2minutes.com/",
+      "https://www.neave.com/strobe/",
+      "https://www.longdogechallenge.com/",
+      "https://www.randomcolour.com/"
+    ];
+
+    function goToUselessSite() {
+      const randomIndex = Math.floor(Math.random() * uselessSites.length);
+      const url = uselessSites[randomIndex];
+      window.open(url, "_blank");
+    }
+  </script>
+</body>
+</html>
